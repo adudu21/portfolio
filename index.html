@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Abdul Rahman — event photographer, photo editor, and graphic designer based in Indonesia."
+    />
+    <title>Abdul Rahman — Photographer & Creative</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="nav" id="top">
+      <a class="brand" href="#top">AR<span>.</span></a>
+      <button class="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PHOTOGRAPHER · PHOTO EDITOR · DESIGNER</p>
+          <h1>I capture<br /><em>moments</em> that<br />feel alive.</h1>
+          <p class="hero-text">
+            Event photographer and creative based in Indonesia. I turn real
+            moments into photographs and visual work that are clean, expressive,
+            and ready to be shared.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work"
+              >Explore my work <span>↓</span></a
+            >
+            <a class="text-link" href="#contact"
+              >Available for opportunities <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-carousel" id="heroCarousel">
+            <div class="hero-stack" id="heroStack">
+              <div class="hero-card back" id="heroBack">
+                <img id="heroImgBack" src="" alt="" />
+              </div>
+              <div class="hero-card front" id="heroFront">
+                <img id="heroImgFront" src="" alt="Featured work" />
+              </div>
+            </div>
+            <button
+              class="hero-arrow hero-arrow-left"
+              id="heroPrev"
+              aria-label="Previous work"
+            >
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M15 5L8 12L15 19"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="hero-arrow hero-arrow-right"
+              id="heroNext"
+              aria-label="Next work"
+            >
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="hero-label">
+              <span id="heroLabelCat">SELECTED FRAME</span
+              ><strong id="heroLabelIndex">01 / 07</strong>
+            </div>
+          </div>
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+        </div>
+        <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
+      </section>
+
+      <section class="intro-band">
+        <p>
+          FROM EVENTS TO PORTRAITS, I WORK WITH A DOCUMENTARY MINDSET —
+          <strong>OBSERVE · COMPOSE · DELIVER.</strong>
+        </p>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 — SELECTED WORK</p>
+            <h2>A visual<br /><em>collection.</em></h2>
+          </div>
+          <p class="section-desc">
+            A selection from my photography portfolio, spanning portraits,
+            community documentation, street scenes, urban spaces, architecture,
+            automotive, and design graphic work.
+          </p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Work categories">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="portrait">Portrait</button>
+          <button class="filter" data-filter="community">Community</button>
+          <button class="filter" data-filter="street">Street</button>
+          <button class="filter" data-filter="urban">Urban</button>
+          <button class="filter" data-filter="architecture">
+            Architecture
+          </button>
+          <button class="filter" data-filter="automotive">Automotive</button>
+          <button class="filter" data-filter="product">Product</button>
+          <button class="filter" data-filter="design-graphic">
+            Design Graphic
+          </button>
+        </div>
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+        <p class="gallery-empty" id="galleryEmpty" hidden>
+          No photos found yet — add some to the <code>assets/</code> folders.
+        </p>
+        <div class="load-more-wrap" id="loadMoreWrap" hidden>
+          <div
+            class="load-more-peek"
+            id="loadMorePeek"
+            aria-hidden="true"
+          ></div>
+          <div class="load-more-fade" aria-hidden="true"></div>
+          <button class="load-more-btn" id="loadMoreBtn" type="button">
+            Load More <span>+</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">02 — WHAT I DO</p>
+            <h2>Creative work<br />with <em>purpose.</em></h2>
+          </div>
+          <p class="section-desc">
+            I combine shooting, editing, and visual design so the final result
+            feels consistent from capture to delivery.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <span>01</span>
+            <h3>Photography</h3>
+            <p>
+              Event, portrait, cosplay, community documentation, street, urban,
+              architecture, and automotive photography.
+            </p>
+            <div class="tool">CAMERA / FIELD WORK</div>
+          </article>
+          <article class="service">
+            <span>02</span>
+            <h3>Photo Editing</h3>
+            <p>
+              Selection, color correction, tonal adjustment, and consistent
+              finishing for a clean, natural-looking visual set.
+            </p>
+            <div class="tool">ADOBE LIGHTROOM</div>
+          </article>
+          <article class="service">
+            <span>03</span>
+            <h3>Graphic Design</h3>
+            <p>
+              Visual layouts, typography, promotional graphics, and supporting
+              design work for digital content and portfolios.
+            </p>
+            <div class="tool">AFFINITY, ADOBE PHOTOSHOP, AND CANVA</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">03 — EXPERIENCE</p>
+            <h2>Built through<br /><em>real projects.</em></h2>
+          </div>
+          <p class="section-desc">
+            Hands-on experience across creative work and professional
+            environments has taught me to stay adaptable, detail-oriented, and
+            reliable.
+          </p>
+        </div>
+        <div class="timeline">
+          <article>
+            <div class="date">2023 — PRESENT</div>
+            <div>
+              <h3>Freelance & Media Coverage</h3>
+              <p>Lead Event Photographer & Media Documentation</p>
+              <small
+                >Documenting large-scale pop culture conventions and media
+                coverages, including Indonesia Comic Con (ICC), AFAID, Comifuro,
+                and Miku Expo. Invited as exclusive media documentation for
+                special anime collaboration events (Kimetsu no Yaiba, Makoto
+                Shinkai works, and Godzilla) at Milou Farm House, Grand
+                Indonesia. Also experienced in capturing educational and
+                institutional events, such as class outbound documentation for
+                AUEO Tutoring.</small
+              >
+            </div>
+          </article>
+          <article>
+            <div class="date">2025 — PRESENT</div>
+            <div>
+              <h3>Event Cosplay Photographer</h3>
+              <p>On-Site Portraiture & Community Practice</p>
+              <small
+                >Actively attending pop-culture conventions as an on-site
+                portrait photographer. I approach cosplayers directly for quick,
+                high-quality character portraits—sharpening my off-camera flash
+                techniques, fast framing in dynamic crowds, and direct
+                communication skills on the field.</small
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-photo">
+          <img
+            src="assets/misc/about.webp"
+            alt="Abdul Rahman portrait"
+            loading="lazy"
+          /><span>ABOUT / 04</span>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">04 — ABOUT ME</p>
+          <h2>Hi, I'm<br /><em>Abdul Rahman.</em></h2>
+          <p class="lead">
+            An event photographer and photo editor based in Indonesia, working
+            since 2023.
+          </p>
+          <p>
+            My workflow doesn't stop at the camera — I also select and edit
+            photographs in Adobe Lightroom, and create graphic work using
+            Affinity.
+          </p>
+          <div class="about-points">
+            <div>
+              <strong>03+</strong><span>Years exploring photography</span>
+            </div>
+            <div><strong>07</strong><span>Photography categories</span></div>
+            <div><strong>03</strong><span>Creative disciplines</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education">
+        <div class="edu-card">
+          <p class="eyebrow">EDUCATION</p>
+          <h3>Senior Vocational School</h3>
+          <p>Accounting and Institutional Finance</p>
+          <span>2026</span>
+        </div>
+        <div class="quote-card">
+          <span>“</span>
+          <p>
+            To me, photography isn't just taking a picture. It's about capturing
+            a moment and giving it a lasting visual identity.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-inner">
+          <p class="eyebrow">05 — CONTACT</p>
+          <h2>Have a project<br />in <em>mind?</em></h2>
+          <p>
+            I'm open to freelance photography, photo editing, design work, and
+            creative opportunities. Feel free to send a DM on Instagram or click
+            the email link below—it will automatically set up a new message for
+            you.
+          </p>
+          <div class="contact-links">
+            <a
+              class="contact-mail"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abdul.rahman220707%40gmail.com&su=Portfolio%20Inquiry%20%E2%80%94%20Abdul%20Rahman"
+              target="_blank"
+              rel="noopener noreferrer"
+              >abdul.rahman220707@gmail.com <span>↗</span></a
+            ><a
+              class="contact-mail contact-ig"
+              href="https://www.instagram.com/kirani.chi_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >@kirani.chi_ on Instagram <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="contact-mark">
+          LET'S CREATE<br />SOMETHING<br /><em>MEMORABLE.</em>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Abdul Rahman</span><span>Photography · Editing · Design</span
+      ><a href="#top">Back to top ↑</a>
+    </footer>
+    <div class="lightbox" aria-hidden="true">
+      <button class="close" aria-label="Close">×</button
+      ><img src="" alt="Expanded portfolio image" />
+    </div>
+    <script src="gallery-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
