@@ -13,6 +13,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -20,6 +21,7 @@ body {
   color: var(--paper);
   font-family: "DM Sans", sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 .noise {
   position: fixed;
@@ -776,11 +778,42 @@ footer a {
     padding-top: 60px;
   }
   .hero-visual {
-    min-height: 500px;
+    min-height: auto;
+    padding: 12px 0 28px;
+    overflow: hidden; /* contains the tilted cards, arrows and orbs so
+                          nothing bleeds sideways into the text above
+                          it or the section below it */
+  }
+  .hero-carousel {
+    width: min(100%, 420px);
+  }
+  /* Slightly tamer tilt than the desktop version: a narrower card
+     has less room to rotate/offset before its edge reaches the
+     container boundary, so the stacked-card look stays intact
+     without any corner poking outside its box. */
+  .hero-card.front {
+    transform: rotate(-4deg);
+  }
+  .hero-card.back {
+    transform: rotate(3deg) translate(14px, 16px) scale(0.95);
   }
   .hero-arrow {
     opacity: 1;
     pointer-events: auto;
+  }
+  .hero-arrow-left {
+    left: 6px;
+  }
+  .hero-arrow-right {
+    right: 6px;
+  }
+  .orb-one {
+    width: 200px;
+    height: 200px;
+  }
+  .orb-two {
+    width: 100px;
+    height: 100px;
   }
   .section-head,
   .about,
@@ -854,14 +887,31 @@ footer a {
     height: 170px;
   }
   .hero-visual {
-    min-height: 420px;
+    min-height: auto;
+    padding: 8px 0 20px;
   }
   .hero-carousel {
-    width: 82%;
+    width: 86%;
+    max-width: 320px;
+  }
+  .hero-card.front {
+    transform: rotate(-3deg);
+  }
+  .hero-card.back {
+    transform: rotate(2deg) translate(10px, 12px) scale(0.96);
   }
   .hero-label {
     right: 0;
     bottom: 25px;
+  }
+  .orb-one {
+    width: 140px;
+    height: 140px;
+    right: 0;
+  }
+  .orb-two {
+    width: 70px;
+    height: 70px;
   }
   .intro-band {
     padding: 22px 20px;

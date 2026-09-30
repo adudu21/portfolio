@@ -1,12 +1,25 @@
 /* ============================================================
    NAV MENU (mobile)
 ============================================================ */
+const contactEmail = document.querySelector(".contact-mail");
+const isTouchDevice =
+  window.matchMedia("(pointer: coarse)").matches ||
+  /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+if (contactEmail && isTouchDevice) {
+  contactEmail.href =
+    "mailto:abdul.rahman220707@gmail.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Abdul%20Rahman";
+  contactEmail.removeAttribute("target");
+}
+
 const menu = document.querySelector(".menu");
 const nav = document.querySelector("nav");
 menu?.addEventListener("click", () => nav.classList.toggle("open"));
-document.querySelectorAll("nav a").forEach((a) =>
-  a.addEventListener("click", () => nav.classList.remove("open")),
-);
+document
+  .querySelectorAll("nav a")
+  .forEach((a) =>
+    a.addEventListener("click", () => nav.classList.remove("open")),
+  );
 
 /* ============================================================
    GALLERY DATA
@@ -51,9 +64,7 @@ function initHeroCarousel() {
   const slides = HERO_CATEGORIES.map((key) => {
     const cat = GALLERY_DATA.find((item) => item.key === key);
     const file = cat?.files?.[0];
-    return file
-      ? { key, label: cat.label, src: file.src }
-      : null;
+    return file ? { key, label: cat.label, src: file.src } : null;
   }).filter(Boolean);
 
   if (!slides.length) return;
@@ -185,7 +196,10 @@ function initGallery() {
   function renderPeek(matched) {
     if (!peekEl) return;
     peekEl.replaceChildren();
-    const upcoming = matched.slice(visibleCount, visibleCount + GALLERY_PEEK_SIZE);
+    const upcoming = matched.slice(
+      visibleCount,
+      visibleCount + GALLERY_PEEK_SIZE,
+    );
     if (!upcoming.length) return;
 
     upcoming.forEach((item) => {
